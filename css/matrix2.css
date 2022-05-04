@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+body {
+  width: 100vh;
+  background-size: cover;
+  background: #eceff1 url(../img/background.svg);
+  font-family: 'Space Mono', monospace;
+}
+
+.modalBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40rem;
+  height: 40rem;
+}
+
+.mainBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Space Mono', monospace;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  -webkit-box-shadow: 0.3rem 0.2rem 1.5rem #b0bec5;
+          box-shadow: 0.3rem 0.2rem 1.5rem #b0bec5;
+  width: 150rem;
+  height: 70rem;
+  border: 0.1rem solid #eceff1;
+  background: linear-gradient(50deg, #ffffffe0, #ffffff50);
+  -webkit-backdrop-filter: blur(0.3rem);
+          backdrop-filter: blur(0.3rem);
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.mainBox .inputbox {
+  position: absolute;
+  -webkit-transform: translate(1rem, 9rem);
+          transform: translate(1rem, 9rem);
+  width: 15%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainBox .inputbox label {
+  color: #78909c;
+  font-size: 2rem;
+}
+
+.mainBox .inputbox input {
+  font-family: 'Space Mono', monospace;
+  text-align: right;
+  font-size: 3rem;
+  outline: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0.2rem solid #eceff1;
+  border-radius: 0.5rem;
+  color: #78909c;
+}
+
+.mainBox .Bmatrix {
+  -webkit-transform: translate(50rem, 9rem);
+          transform: translate(50rem, 9rem);
+}
+
+.mainBox [class*='pic'] {
+  position: absolute;
+  border-radius: 2rem;
+  width: 40%;
+  padding: 2rem;
+  height: 70%;
+  margin: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 0.1rem solid #cfd8dc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainBox .Mtitle {
+  font-size: 4.5rem;
+  padding: 0.5rem;
+  -webkit-transform: translate(4rem, 0rem);
+          transform: translate(4rem, 0rem);
+  margin-top: 2rem;
+  display: inline-block;
+  color: #4b636e;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+}
+
+.mainBox .Mtitle span {
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: #b0bec5;
+}
+
+.mainBox [class*='pic']:hover,
+.mainBox .BresultBox:hover {
+  border: 0.2rem solid white;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.8rem #b0bec5;
+          box-shadow: 0.1rem 0.1rem 0.8rem #b0bec5;
+}
+
+.mainBox .iconLine {
+  width: 65rem;
+  height: 5rem;
+  border: 0.1rem solid #cfd8dc;
+  border-radius: 10rem;
+  background: rgba(255, 255, 255, 0.589);
+  margin: 1rem;
+  padding: 0.3rem;
+  text-align: center;
+  position: relative;
+  -webkit-transform: translate(50rem);
+          transform: translate(50rem);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.mainBox .iconLine:hover {
+  -webkit-box-shadow: 0.1rem 0.1rem 0.8rem #b0bec5;
+          box-shadow: 0.1rem 0.1rem 0.8rem #b0bec5;
+  border: 0.1rem solid white;
+}
+
+.mainBox [class*='icons'] {
+  display: inline;
+  float: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 5rem;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  cursor: pointer;
+  color: #78909c;
+}
+
+.mainBox .help {
+  margin-left: 3.5rem;
+}
+
+.mainBox [class*='icons']:hover {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+}
+
+.mainBox .add:hover {
+  color: #18ffff;
+}
+
+.mainBox .remove:hover {
+  color: #ff5252;
+}
+
+.mainBox .close:hover {
+  color: #536dfe;
+}
+
+.mainBox .shuffle:hover {
+  color: #b2ff59;
+}
+
+.mainBox .refresh:hover {
+  color: #fff;
+}
+
+.mainBox:hover {
+  -webkit-box-shadow: 0.3rem 0.2rem 1rem #b0bec5;
+          box-shadow: 0.3rem 0.2rem 1rem #b0bec5;
+}
+
+.pickBbox {
+  -webkit-transform: translate(10rem, 17rem);
+          transform: translate(10rem, 17rem);
+}
+
+.resultinput {
+  font-family: 'Space Mono', monospace;
+  text-align: right;
+  font-size: 3rem;
+  outline: 0;
+  width: 5rem;
+  height: 5rem;
+  border: 0.2rem solid #eceff1;
+  border-radius: 0.5rem;
+  color: #78909c;
+}
+
+.BresultBox {
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 60rem;
+  height: 50rem;
+  border: 0.1rem solid #eceff1;
+  background: linear-gradient(50deg, #ffffffe0, #ffffff50);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 0.2rem solid #cfd8dc;
+  -webkit-transform: translate(0, 80rem);
+          transform: translate(0, 80rem);
+  margin: auto;
+}
+
+.mainBox::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.warningShow {
+  display: inline-block;
+}

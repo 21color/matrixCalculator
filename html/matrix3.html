@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=PT+Sans&family=Space+Mono:ital@0;1&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="apple-touch-icon" sizes="57x57" href="../img/matrixfavicon/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../img/matrixfavicon/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../img/matrixfavicon/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../img/matrixfavicon/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../img/matrixfavicon/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../img/matrixfavicon/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../img/matrixfavicon/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../img/matrixfavicon/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../img/matrixfavicon/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="../img/matrixfavicon/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../img/matrixfavicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="../img/matrixfavicon/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../img/matrixfavicon/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="../img/matrixfavicon/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="shortcut icon" href="../img/matrixfavicon/favicon.ico" />
+		<link rel="stylesheet" href="../css/matrix3.css" />
+		<title>Matrix Calculator</title>
+	</head>
+	<body>
+		<div id="myCircle"></div>
+		<!-- 모달창영역 -->
+		<section class="modalBox">
+			<header>
+				<h1>Manual</h1>
+				<span class="material-icons circle"> circle </span>
+			</header>
+
+			<div class="infor_first">
+				<ul class="material-icons crop_din">
+					crop_din
+					<li>행렬에 숫자 입력시 행렬이 만들어집니다.</li>
+					<li>문자입력은 불가능합니다.</li>
+				</ul>
+				<ul class="material-icons calculate">
+					calculate
+					<li>연산버튼을 불러옵니다.</li>
+					<li>행렬을 만들어야 버튼이 활성화됩니다.</li>
+				</ul>
+				<ul class="material-icons refresh">
+					refresh
+					<li>행렬을 리셋합니다.</li>
+				</ul>
+			</div>
+			<h3>Calculate button</h3>
+			<div class="infor_second">
+				<ul class="material-icons shuffle">
+					shuffle
+					<li>랜덤한 숫자를 입력합니다.</li>
+				</ul>
+				<ul class="material-icons add">
+					add
+					<li>행렬을 더합니다.</li>
+				</ul>
+				<ul class="material-icons remove">
+					remove
+					<li>행렬을 뺍니다.</li>
+				</ul>
+				<ul class="material-icons close">
+					close
+					<li>행렬을 곱합니다.</li>
+				</ul>
+				
+		
+			</div>
+		</section>
+		<!-- 경고창팝업 -->
+		<section class="modalPop">
+			<!-- 요기에 자바스크립트로 들어가요옹  -->
+		</section>
+
+		<!-- cal 영역 -->
+		<section class="matrixCal">
+			<!-- header -->
+			<header class="matrixheader">
+				<h1 id="matrixheader__title">Matrix Calculator</h1>
+				<!-- 연산 -->
+				<nav class="calculatorNav">
+					<span id="calculate" class="material-icons calgroupCc">calculate</span>						
+					<span id="shuffleBtn" class="material-icons shuffle">shuffle</span>
+					<span id="addBtn" class="material-icons add">add</span>
+					<span id="removeBtn" class="material-icons remove">remove</span>
+					<span id="multiBtn" class="material-icons close">close</span>
+					<span id="refreshBtn" class="material-icons refresh">refresh</span>
+					<span id="helpBtn" class="material-icons help">help_outline</span>
+				</nav>
+			</header>
+			<!-- body -->
+			<section class="matrixBody">
+				<!-- inputNum -->
+				<div class="matrixBody__inputNum">
+					<label for="inputNumA"
+						><h2>PART A</h2>
+						<input type="text" tabindex="10" class="Arow" autocomplete="off" maxlength="1" />
+						<input type="text" tabindex="20" class="Acol" autocomplete="off" maxlength="1" />
+						<p class="waring"></p>
+					</label>
+
+					<label for="inputNumB" id="inputBlabel"
+						><h2>PART B</h2>
+						<input type="text" tabindex="30" class="Brow" autocomplete="off" maxlength="1" />
+						<input type="text" tabindex="40" class="Bcol" autocomplete="off" maxlength="1" />
+						<p class="waring"></p>
+					</label>
+				</div>
+				<!-- input 박스들 나오는 창 -->
+				<div class="matrixBody__ABresultbox">
+					<div class="Resultbox__Abox">
+						<!-- innerhtml로 input 넣어줄 곳 -->
+					</div>
+					 <section class="warningShow">
+						 <p>연산 숫자 입력은</p>
+						 <p>4자리까지 가능합니다.</p>
+					 </section>
+					<div class="Resultbox__Bbox">
+						<!-- innerhtml로 Input 넣어줄 곳  --> 
+					</div>
+				</div>
+			</section>
+
+			<!-- 최종결과창 -->
+			<div class="Resultbox__finalBox"></div>
+		</section>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="../js/matrix2.js"></script>
+	</body>
+</html>
